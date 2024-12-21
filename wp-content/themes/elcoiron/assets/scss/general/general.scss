@@ -1,0 +1,132 @@
+@import 'mixins.scss';
+
+/* --- Fonts --- */
+$font-weights: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    black: 900
+);
+
+$plusJakartaSans: "Plus Jakarta Sans", sans-serif;
+
+/* --- Colors --- */
+$black: #000000;
+$dark: #2A1F20;
+$white: #ffffff;
+$lightGray: #F9F4F4;
+$warmGray: #E1CECF;
+$warmMediumGray: #E3E1DD;
+$warmDarkGray: #584C4D;
+$redVielight: #E91E63;
+$redVielightHover: #971440;
+$orange: #FF7644;
+$electricBlue: #0D6ABD;
+$deepBlue: #002C6C;
+$sky: #61A6E4; 
+$water: #D1E2FF;
+
+/* --- Containers --- */
+.container {
+    width: 100%;
+    max-width: 1260px;
+    padding: 0 30px;
+    margin: 0 auto;
+
+    // Mobile
+    @include respond-below('sm') {
+        padding: 0 20px;
+    }
+}
+
+/* --- Headings --- */
+.heading-xl {
+    font-size: 4rem; // 65px
+    line-height: 4.5rem;
+}
+
+.heading-l {
+    font-size: 3.5rem; // 56px
+    line-height: 4rem;
+}
+
+.heading-m {
+    font-size: 3rem; // 48px
+    line-height: 3.5rem;
+}
+
+.heading-s {
+    font-size: 2.5rem; // 40px
+    line-height: 3rem;
+}
+
+.heading-xs {
+    font-size: 2rem; // 32px
+    line-height: 2.5rem;
+
+    // Mobile
+    @include respond-below('sm') {
+        font-size: 1.25rem; // 20px
+        line-height: 2rem;
+    }
+}
+
+/* --- Text --- */
+.text-xl {
+    font-size: 1.5rem; // 24px
+    line-height: 2rem;
+}
+
+.text-l {
+    font-size: 1.25rem; // 20px
+    line-height: 1.5rem;
+}
+
+.text-m {
+    font-size: 1rem; // 16px
+    line-height: 1.5rem;
+
+    // Mobile
+    @include respond-below('sm') {
+        font-size: .875rem; 
+        line-height: 1.25rem;
+    }
+}
+
+.text-s {
+    font-size: .875rem; // 14px
+    line-height: 1.25rem;
+}
+
+.text-xs {
+    font-size: .75rem; // 12px
+    line-height: 1rem;
+}
+
+/* --- Buttons --- */
+button,
+a.button {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px;
+    border-width: 0px;
+    border-color: rgb(0, 0, 0);
+    font-family: Noto Sans;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    letter-spacing: 0px;
+    padding: 10px 20px;
+    min-width: 236px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: rgb(200, 113, 70);
+        color: white;
+    }
+}

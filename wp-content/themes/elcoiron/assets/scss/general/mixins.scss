@@ -1,0 +1,30 @@
+/* --- Media Queries --- */
+
+// MIN-WIDTH
+@mixin respond-above($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+        @media (min-width: $breakpoint-value) {
+            @content;
+        }
+    }
+}
+
+// MAX-WIDTH
+@mixin respond-below($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+        @media (max-width: $breakpoint-value) {
+            @content;
+        }
+    }
+}
+
+$breakpoints: (
+	xxl: 1600px,
+	xl: 1439px,
+	l: 1200px,
+	sl: 992px,
+	md: 768px,
+	sm: 576px
+);

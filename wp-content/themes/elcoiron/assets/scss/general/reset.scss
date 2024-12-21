@@ -1,0 +1,91 @@
+@import 'general.scss';
+
+/* --- Resets --- */
+* {
+    box-sizing: border-box;
+    font-family: $plusJakartaSans;
+    scroll-behavior: smooth;
+    appearance: none;
+    text-decoration: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    max-width: 1920px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+header,
+footer {
+    margin: 0 auto;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: initial;
+
+    &:hover {
+        color: initial;
+    }
+}
+
+ul,
+ol {
+    padding-left: 32px;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: map-get($font-weights, 'regular');
+    margin: 0;
+    font-family: $plusJakartaSans;
+}
+
+p,
+span,
+li {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: .05em;
+    font-family: $plusJakartaSans;
+    color: $black;
+}
+
+button {
+    appearance: none;
+    cursor: pointer;
+}
+
+label,
+input {
+    font-family: $plusJakartaSans;
+    color: $black;
+}
+
+/* -- Remove input[type="number"] default arrows -- */
+input::-webkit-outer-spin-button, // Chrome, Safari, Edge, Opera
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] { // Firefox 
+  -moz-appearance: textfield;
+}
